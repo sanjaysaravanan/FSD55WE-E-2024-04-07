@@ -90,8 +90,9 @@ Topics:
       passing function ( a function which accepts data as agrument )
        as prop  to the child
 
+  
+Next Session:
   5. Props Drilling
-
 
 Task:
 
