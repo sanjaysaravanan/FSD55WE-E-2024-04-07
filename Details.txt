@@ -1,0 +1,103 @@
+
+Recap:
+  1. What is hook?
+      Sort of hooking to the VDOM, controls the rendering of VDOM
+      
+      Eg: useState --> helps in re-rendering whenever any changes in the state happens.
+       useState --> Help creating state variable
+
+      useRef -> 
+
+  2. State vs Props:
+        Props ---> static values passed during rendering as attributes
+        Eg:
+          <Todo isCompleted={false} lastDate={'2023-01-01'}  />
+          isCompleted, lastDate props
+
+        State --> a value change causing the re-rendering
+          <Counter initialValue={10} />, initialValue ---> prop
+
+          count value that changes inside the component is called state
+
+  3. Reusable Components:
+      Trying to re-reuse the parts of the design
+
+      Always look for commanalities in the design and write resusable components with similar props
+  
+  4. Component Life Cycle:
+
+      Initialization: JS Loads the JSX into the memory
+
+      Mounting: JSX gets loaded into the RealDOM
+
+      Updating: Some contents or state gets updated in the Component JSX
+
+      Unmounting: Removing the element from the RealDOM
+
+Topics:
+ 
+  2. Life Cycle Hook - useEffect
+
+      We are gonna target each of the phases and we are going to do something those phases( Mounting, Updating, Unmounting )
+
+      Mounted: useEffect with Mounted
+        Examples: Calculating initial value or loading some data from APIs
+        
+        useEffect(() => {
+          // Statements to execute on Mouted phase 
+
+        }, []);
+    
+      Updated: Liking a particular product / post in instagram
+      useEffect(() => {
+          // mounted is a boolean state for mounting
+          if (mounted) {
+            // Statements to execute on update phase 
+            // dependency array is must
+
+          }
+
+        }, [<dep-val>]);
+
+      Unmounting: Deleting a product from Cart
+        useEffect(() => {
+          
+          return () => {
+            // Statements to execute on un-Mouted phase 
+          }
+
+        }, []);
+
+  3. CRUD implementations for the students or similar application
+      1. React Project Setup
+          using vite framework
+            1. npm create vite@latest
+            2. enter project name
+            3. select framework react
+            4. select variant javascript
+            5. Follow the instructions on the screen
+              1. cd <project-name>
+              2. npm install
+              3. npm run dev
+
+      2. Create a form for adding products
+      3. Product should edit / delete btn
+      4. Like button
+  
+  4. Passing Data from Parent to Child Component
+      passing the data from parent to child in the props ( child props )
+     Passing Data from child to parent
+      passing function ( a function which accepts data as agrument )
+       as prop  to the child
+
+  5. Props Drilling
+
+
+Task:
+
+  CRUD implementations for the ToDo application,
+
+  Try to implement UI, will show a small demo code of similar application in the next session.
+
+  https://docs.google.com/document/d/1frCM6keoI6YKQqxm0XbgEP2CCZjDH5Zi8wEp_NXtk2g/edit
+  
